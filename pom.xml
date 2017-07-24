@@ -1,7 +1,112 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.w77996</groupId>
-  <artifactId>JavaUtils</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <build/>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.w77996</groupId>
+	<artifactId>JavaUtils</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<build />
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jdk.version>1.8</jdk.version>
+		<!-- libs -->
+		<junit.version>4.12</junit.version>
+		<!-- spring版本号 -->
+		<!-- <spring.version>4.3.8.RELEASE</spring.version> -->
+		<spring.version>4.2.6.RELEASE</spring.version>
+		<!-- mybatis版本号 -->
+		<mybatis.version>3.4.1</mybatis.version>
+		<!-- mybatis-spring版本号 -->
+		<mybatis-spring.version>1.3.0</mybatis-spring.version>
+		<!-- druid版本号 -->
+		<druid.version>1.0.31</druid.version>
+		<!-- Mysql数据库驱动版本号 -->
+		<mysql.version>5.1.39</mysql.version>
+		<!-- 日志版本号 -->
+		<slf4j.version>1.7.25</slf4j.version>
+		<log4j.version>1.2.17</log4j.version>
+		<!-- shiro版本号 -->
+		<shiro.version>1.4.0</shiro.version>
+		<fastjson.version>1.2.32</fastjson.version>
+		<gson.version>2.8.1</gson.version>
+		<!-- jetty-maven-plugin版本号 -->
+		<jetty-maven-plugin.version>9.4.3.v20170317</jetty-maven-plugin.version>
+		<commons-lang.version>2.6</commons-lang.version>
+		<!-- cglib版本号 -->
+		<cglib.version>3.2.5</cglib.version>
+		<!-- spring aop版本号 -->
+		<aspectjrt.version>1.5.4</aspectjrt.version>
+		<aspectjweaver.version>1.8.10</aspectjweaver.version>
+		<!-- jstl版本号 -->
+		<jstl.version>1.2</jstl.version>
+		<commons-io.version>2.5</commons-io.version>
+	</properties>
+
+	<dependencies>
+		<!-- 工具包 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>${commons-lang.version}</version>
+		</dependency>
+		<!-- json -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.8.8</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.8.8</version>
+		</dependency>
+
+		<!-- 操作Excel工具包 start -->
+		<dependency>
+			<groupId>net.sourceforge.jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+			<version>2.6.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.16</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.16</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>3.16</version>
+		</dependency>
+		<!-- 操作Excel工具包 End -->
+		 <!-- jsp -->
+		<!--<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		jsp -->
+	</dependencies>
 </project>

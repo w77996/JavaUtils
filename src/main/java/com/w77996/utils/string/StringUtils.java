@@ -5,15 +5,19 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-
+/**
+ * 
+ * @ClassName:       StringUtils
+ * @Description:     TODO
+ * @author:          w77996
+ * @date:            2017年7月24日        下午6:46:32
+ */
 public class StringUtils {
 	
-	private static final Log LOG = LogFactory.getLog(StringUtils.class);
 	
 	private StringUtils(){
 		
