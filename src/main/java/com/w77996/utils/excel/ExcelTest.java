@@ -6,6 +6,7 @@ import java.util.List;
 
 
 
+
 public class ExcelTest {
 
 	public static void main(String[] args) {
@@ -15,25 +16,34 @@ public class ExcelTest {
 		employees.add(new Employee(1002, "Clark", 40, "Manager", 2450));
 		employees.add(new Employee(1003, "Scott", 30, "Analyst", 3000));
 		employees.add(new Employee(1004, "King", 50, "President", 5000));
-		String[] titles = new String[]{"工号", "姓名", "年龄", "职称", "薪资（美元）", "入职时间"};
+		String[] titles = new String[]{"宸ュ彿", "濮撳悕", "骞撮緞", "鑱岀О", "钖祫锛堢編鍏冿級", "鍏ヨ亴鏃堕棿"};
 		String[] fieldNames = new String[]{"id", "name", "age", "job", "salery", "addtime"};
 		try {
 			File file1 = new File("E:\\JXL2003.xls");
-			if(file1.exists()){
-				System.out.println("file1 exists");
-			}
 			ExcelHelper eh1 = JxlExcelHelper.getInstance(file1);
-			if(eh1 == null){
-				System.out.println("null");
-			}
 			eh1.writeExcel(Employee.class, employees);
 			eh1.writeExcel(Employee.class, employees, fieldNames, titles);
 			List<Employee> list1 = eh1.readExcel(Employee.class, fieldNames, true);
-			if(list1 == null || list1.size() <= 0){
-				System.out.println("list null");
-			}
 			System.out.println("-----------------JXL2003.xls-----------------");
 			for (Employee user : list1) {
+				System.out.println(user);
+			}
+			File file2 = new File("E:\\POI2003.xls");
+			ExcelHelper eh2 = HssfExcelHelper.getInstance(file2);
+			eh2.writeExcel(Employee.class, employees);
+			eh2.writeExcel(Employee.class, employees, fieldNames, titles);
+			List<Employee> list2 = eh2.readExcel(Employee.class, fieldNames, true);
+			System.out.println("-----------------POI2003.xls-----------------");
+			for (Employee user : list2) {
+				System.out.println(user);
+			}
+			File file3 = new File("E:\\POI2007.xlsx");
+			ExcelHelper eh3 = XssfExcelHelper.getInstance(file3);
+			eh3.writeExcel(Employee.class, employees);
+			eh3.writeExcel(Employee.class, employees, fieldNames, titles);
+			List<Employee> list3 = eh3.readExcel(Employee.class, fieldNames, true);
+			System.out.println("-----------------POI2007.xls-----------------");
+			for (Employee user : list3) {
 				System.out.println(user);
 			}
 		} catch (Exception e) {

@@ -1,4 +1,4 @@
-package com.w77996.utils.date;
+package com.w77996.utils.json;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,15 +10,16 @@ import javax.servlet.http.HttpServletResponse;
 import com.alibaba.fastjson.JSONObject;
 
 /**
- * Description:Json瑙ｆ瀽宸ュ叿绫�
  * 
- * @author w77996
- * @date 2017骞�鏈�鏃�涓嬪崍9:51:50
+ * @ClassName:       JsonUtils1
+ * @Description:     fastjson工具类
+ * @author:          w77996
+ * @date:            2017年7月25日        下午3:21:53
  */
-public class JsonUtils {
+public class JsonUtils1 {
 
 
-	private JsonUtils() {
+	private JsonUtils1() {
 
 	}
 
@@ -44,7 +45,7 @@ public class JsonUtils {
 			jsonObject = JSONObject.parseObject(sBuffer.toString());
 		} catch (IOException e) {
 			// e.printStackTrace();
-			LOG.error(e);
+			//LOG.error(e);
 		}
 		return jsonObject;
 	}
@@ -65,7 +66,7 @@ public class JsonUtils {
 			response.getWriter().write(obj.toString());
 		} catch (IOException e) {
 			// e.printStackTrace();
-			LOG.error(e);
+			//LOG.error(e);
 		}
 	}
 

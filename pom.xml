@@ -27,11 +27,15 @@
 		<log4j.version>1.2.17</log4j.version>
 		<!-- shiro版本号 -->
 		<shiro.version>1.4.0</shiro.version>
+		<!--fastjson版本号  -->
 		<fastjson.version>1.2.32</fastjson.version>
+		<!-- gson版本号 -->
 		<gson.version>2.8.1</gson.version>
 		<!-- jetty-maven-plugin版本号 -->
 		<jetty-maven-plugin.version>9.4.3.v20170317</jetty-maven-plugin.version>
 		<commons-lang.version>2.6</commons-lang.version>
+		<!-- ftp apache。net组件 -->
+		<commons-net.version>3.3</commons-net.version>
 		<!-- cglib版本号 -->
 		<cglib.version>3.2.5</cglib.version>
 		<!-- spring aop版本号 -->
@@ -40,6 +44,8 @@
 		<!-- jstl版本号 -->
 		<jstl.version>1.2</jstl.version>
 		<commons-io.version>2.5</commons-io.version>
+		<httpclient.version>4.3.5</httpclient.version>
+		<servlet-api.version>3.0-alpha-1</servlet-api.version>
 	</properties>
 
 	<dependencies>
@@ -55,7 +61,7 @@
 			<artifactId>commons-lang</artifactId>
 			<version>${commons-lang.version}</version>
 		</dependency>
-		<!-- json -->
+		<!-- jackson  begain-->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
@@ -66,13 +72,15 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.8.8</version>
 		</dependency>
-
+		<!-- jackson end -->
 		<!-- 操作Excel工具包 start -->
+		<!-- jxl -->
 		<dependency>
 			<groupId>net.sourceforge.jexcelapi</groupId>
 			<artifactId>jxl</artifactId>
 			<version>2.6.12</version>
 		</dependency>
+		<!-- poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
@@ -89,24 +97,54 @@
 			<version>3.16</version>
 		</dependency>
 		<!-- 操作Excel工具包 End -->
-		 <!-- jsp -->
-		<!--<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet.jsp</groupId>
-			<artifactId>jsp-api</artifactId>
-			<version>2.1</version>
-			<scope>provided</scope>
-		</dependency>
+		 
+		<!-- servlet-api jar包 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet-api.version}</version>
 		</dependency>
-		jsp -->
+		
+		<!-- 打印日志管理jar包 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>${commons-lang.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+		</dependency>
+		<dependency>
+				<groupId>commons-net</groupId>
+				<artifactId>commons-net</artifactId>
+				<version>${commons-net.version}</version>
+		</dependency>
+		
+		<!-- httpclient -->
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpclient</artifactId>
+				<version>${httpclient.version}</version>
+			</dependency>
 	</dependencies>
 </project>
