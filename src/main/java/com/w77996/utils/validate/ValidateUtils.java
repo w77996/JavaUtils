@@ -6,7 +6,13 @@ import com.w77996.utils.string.StringUtils;
 
 
 
-
+/**
+ * 
+ * @ClassName:       ValidateUtils
+ * @Description:     字符串的判断处理
+ * @author:          w77996
+ * @date:            2017年7月25日        下午4:17:53
+ */
 public class ValidateUtils {
 
 	/*public static boolean isPassword(String pwd){
@@ -38,6 +44,15 @@ public class ValidateUtils {
 		Pattern pattern = Pattern.compile("^[-\\+]?[\\d]*$");
 		return pattern.matcher(str).matches();
 	}
+	/**
+	 * 
+	 * @Title:           isLettersOnly
+	 * @Description:     TODO
+	 * @param:           @param str
+	 * @param:           @return   
+	 * @return:          boolean   
+	 * @throws
+	 */
 	public static boolean isLettersOnly(String str) {
 		Pattern pattern = Pattern.compile("^[A-Za-z]+$");
 		return pattern.matcher(str).matches();

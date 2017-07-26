@@ -6,9 +6,11 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * 日期工具类：用于日期相关的处理
- * @author liufeng
- * @date 2017-7-4
+ * 
+ * @ClassName:       DateUtil
+ * @Description:     TODO
+ * @author:          w77996
+ * @date:            2017年7月26日        下午4:21:39
  */
 public class DateUtil {
 

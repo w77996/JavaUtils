@@ -123,12 +123,9 @@ public class DateUtils extends org.apache.commons.lang.time.DateUtils {
 	/**
 	 * 根据单位字段比较两个时间
 	 * 
-	 * @param date
-	 *            时间1
-	 * @param otherDate
-	 *            时间2
-	 * @param withUnit
-	 *            单位字段，从Calendar field取值
+	 * @param date时间1
+	 * @param otherDate时间2
+	 * @param withUnit单位字段，从Calendar field取值
 	 * @return 等于返回0值, 大于返回大于0的值 小于返回小于0的值
 	 */
 	public static int compareTime(Date date, Date otherDate, int withUnit) {

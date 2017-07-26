@@ -6,7 +6,11 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
- * 自定义响应结构
+ * 
+ * @ClassName:       JsonResult
+ * @Description:     自定义返回的json
+ * @author:          w77996
+ * @date:            2017年7月26日        下午4:22:30
  */
 public class JsonResult {
 
