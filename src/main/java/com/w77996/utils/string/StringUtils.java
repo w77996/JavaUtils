@@ -48,27 +48,78 @@ public class StringUtils {
 	public static int getIntFromJSon(JSONObject json,String str){
 		return json.containsKey(str)?json.getInteger(str):0;
 	}
-	
+	/**
+	 * 
+	 * @Title:           getJsonArrayFromJson
+	 * @Description:     TODO
+	 * @param:           @param json
+	 * @param:           @param str
+	 * @param:           @return   
+	 * @return:          JSONArray   
+	 * @throws
+	 */
 	public static JSONArray getJsonArrayFromJson(JSONObject json,String str){
 		return json.containsKey(str)?json.getJSONArray(str):null;
 	}
-	
+	/**
+	 * 
+	 * @Title:           getFloatFromJson
+	 * @Description:     TODO
+	 * @param:           @param json
+	 * @param:           @param str
+	 * @param:           @return   
+	 * @return:          float   
+	 * @throws
+	 */
 	public static float getFloatFromJson(JSONObject json,String str){
 		return json.containsKey(str)?json.getFloat(str):0L;
 	}
-	
+	/**
+	 * 
+	 * @Title:           getDateFromJson
+	 * @Description:     TODO
+	 * @param:           @param json
+	 * @param:           @param str
+	 * @param:           @return   
+	 * @return:          Date   
+	 * @throws
+	 */
 	public static Date getDateFromJson(JSONObject json,String str){
 		return json.containsKey(str)?json.getDate(str):null;
 	}
-	
+	/**
+	 * 
+	 * @Title:           isEmpty
+	 * @Description:     TODO
+	 * @param:           @param str
+	 * @param:           @return   
+	 * @return:          boolean   
+	 * @throws
+	 */
 	public static boolean isEmpty(String str){
 		return null == str || "".equals(str);
 	}
-	
+	/**
+	 * 
+	 * @Title:           isEmpty
+	 * @Description:     TODO
+	 * @param:           @param objects
+	 * @param:           @return   
+	 * @return:          boolean   
+	 * @throws
+	 */
 	public static boolean isEmpty(Object[] objects){
 		return null == objects || 0 == objects.length;
 	}
-	
+	/**
+	 * 
+	 * @Title:           isEmpty
+	 * @Description:     TODO
+	 * @param:           @param object
+	 * @param:           @return   
+	 * @return:          boolean   
+	 * @throws
+	 */
 	public static boolean isEmpty(Object object){
 		if(null == object){
 			return true;
@@ -78,7 +129,15 @@ public class StringUtils {
 		}
 		return !(object instanceof Number)?false:false;
 	}
-	
+	/**
+	 * 
+	 * @Title:           isEmpty
+	 * @Description:     TODO
+	 * @param:           @param list
+	 * @param:           @return   
+	 * @return:          boolean   
+	 * @throws
+	 */
 	public static boolean isEmpty(List<?> list){
 		return null == list || list.isEmpty();
 	}
@@ -86,15 +145,37 @@ public class StringUtils {
 	public static boolean isEmpty(Map<?, ?> map){
 		return null == map || map.isEmpty();
 	}
-	
+	/**
+	 * 
+	 * @Title:           getExt
+	 * @Description:     TODO
+	 * @param:           @param filename
+	 * @param:           @return   
+	 * @return:          String   
+	 * @throws
+	 */
 	public static String getExt(String filename){
 		return filename.substring(filename.lastIndexOf(".")+1);
 	}
-	
+	/**
+	 * 
+	 * @Title:           get32UUID
+	 * @Description:     TODO
+	 * @param:           @return   
+	 * @return:          String   
+	 * @throws
+	 */
 	public static String get32UUID(){
 		return UUID.randomUUID().toString().replace("-", "");
 	}
-	
+	/**
+	 * 
+	 * @Title:           getUUID
+	 * @Description:     TODO
+	 * @param:           @return   
+	 * @return:          String   
+	 * @throws
+	 */
 	public static String getUUID(){
 		return UUID.randomUUID().toString();
 	}
